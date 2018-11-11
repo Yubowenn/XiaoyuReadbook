@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html  >
+	<head>
+		<meta charset="utf-8">
+		<title>湖北省游客满意度网络调查问卷</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="mui/css/mui.min.css">
+	</head>
+	<body   >
+<div class="mui-card">
+	<!--页眉，放置标题-->
+	<div class="mui-card-header mui-card-media" style="height:40vw;background-image:url(images/1.jpg)"></div>
+	<!--内容区-->
+	<div class="mui-card-content">内容区</div>
+	<!--页眉，放置标题-->
+	<div class="mui-card-header">页眉</div>
+	<!--内容区-->
+	<div class="mui-card-content">内容区</div>
+	<!--页眉，放置标题-->
+	<div class="mui-card-header">页眉</div>
+	<!--内容区-->
+	<div class="mui-card-content">内容区</div>
+	
+	<ul class="mui-table-view">
+    <li class="mui-table-view-cell">Item 1 
+        <span class="mui-badge mui-badge-primary">11</span>
+    </li>
+    <li class="mui-table-view-cell">Item 2 
+        <span class="mui-badge mui-badge-success">22</span>
+    </li>
+    <li class="mui-table-view-cell">Item 3 
+        <span class="mui-badge">33</span>
+    </li>
+</ul>
+<ul class="mui-table-view">
+    <li class="mui-table-view-cell">
+        <a href="city.html" 
+		class="mui-navigate-right"><span class="mui-badge-mui-badge-inverted">1.</span>武汉市</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a href="city.html" class="mui-navigate-right">Item 2</a>
+    </li>
+    <li class="mui-table-view-cell">
+        <a href="city.html" class="mui-navigate-right">Item 3</a>
+    </li>
+</ul>
+</div>
+
+	</body>
+
+
+
+	<script src="mui/js/mui.min.js"></script> 
+</html>
