@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  >
+<html>
 	<head>
 		<meta charset="utf-8">
 		<title>小宇读书</title>
@@ -9,17 +9,45 @@
 		<!--标准mui.css-->
 		<link rel="stylesheet" href="mui/css/mui.min.css">
 		<script src="mui/js/mui.min.js">
-		//获得slider插件对象
+			//获得slider插件对象
 		var gallery = mui('.mui-slider');
 		gallery.slider({
   		interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
 		});
 		</script>
+		<style type="text/css">
+			#list {
+				/*避免导航边框和列表背景边框重叠，看起来像两条边框似得；*/
+				margin-top: -1px;
+			}
+
+			.mui-bar .mui-pull-left .mui-icon {
+				padding-right: 5px;
+				font-size: 28px;
+			}
+
+			.mui-bar .mui-btn {
+				font-weight: normal;
+				font-size: 17px;
+			}
+		</style>
 	</head>
+
+
+
+
 	<body>
 		<!--载入页面-->
-		
-		
+
+		<form action="s.html" onSubmit="sreachsub()">
+		<header id="header" class="mui-bar mui-bar-nav">
+			<h1 class="mui-pull-left" style="width:36%; height:36px; overflow:hidden">小宇读书</h1>
+			<div class="mui-pull-rightheader-sreach"><input id="sreach" name="q" type="text" class="mui-input-clear" placeholder="Green"
+				 style="width:50%"><span class="mui-icon mui-icon-search sreach"></span></div>
+		</header>
+		</form>
+
+
 		<!--滑动展示介绍页面-->
 		<div class="mui-slider">
 			<div class="mui-slider-group">
@@ -30,11 +58,11 @@
 				<div class="mui-slider-item"><a href="#"><img src="images/5.jpg" /></a></div>
 			</div>
 		</div>
-	
-	
+
+
 	</body>
 
 
 
-	<script src="mui/js/mui.min.js"></script> 
+	<script src="mui/js/mui.min.js"></script>
 </html>
