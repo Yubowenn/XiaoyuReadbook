@@ -1,102 +1,48 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title></title>
-		<script src="js/mui.min.js"></script>
-		<link href="css/mui.min.css" rel="stylesheet" />
-		<script type="text/javascript" charset="utf-8">
-			mui.init();
-		</script>
 
-		<style>
-			.product-icon {
-				text-align: center;
-				height: 100px;
-				line-height: 100px;
-				background: #999;
-			}
-			
-			#signin{
-				    position: fixed;
-					top: 200px;
-					right: 130px;
-					z-index: 999;
-					border: none;
-					border-radius: 6px;
-					padding: 7px 13px;
-					color: #37a09c;
-					background: rgba(0,0,0,0.5);
-			}
-		</style>
-	</head>
-	<body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>入口页面</title>
+        <link href="css/mui.min.css" rel="stylesheet" />
+        <style type="text/css">
+            body {
+                background-color: black;
+            }
+        </style>
+    </head>
 
-
-
-		<!--载入界面标题-->
-		<div class="mui-content">
-			<div class="product-icon"><span>小宇读书</span></div>
-		</div>
-
-		<button type="button" class="mui-btn mui-btn-primary" id="signin">登入</button>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</body>
-
-	<script>
-		mui.init({
-					gestureConfig: {
-						tap: true, //默认为true
-						doubletap: true, //默认为false
-						longtap: true, //默认为false
-						swipe: true, //默认为true
-						drag: true, //默认为true
-						hold: false, //默认为false，不监听
-						release: false //默认为false，不监听
-					});
-
-
-				mui.ready((function) {
-
-				})
-
-
-				mui.plusReady(function() {
-					var page = ["01-jiazaiziyemian.html", "02-tabbarDiv.html", "03-tabbarWebView.html", "04-tabbarMy.html",
-						"05-imglunbo.html", "06-Camera.html", "07-fullPush.html"
-					];
-
-					var arr = document.getElementsByTagName("a");
-					for (var i = 0; i < arr.length; i++) {
-						! function(i) {
-							// 在手机APP中，事件绑定推荐使用DOM2模型。 用tap事件取代click事件。
-							arr[i].addEventListener("tap", function() {
-								mui.openWindow({
-									url: page[i],
-									id: page[i],
-								})
-							})
-						}(i);
-					}
-				})
-	</script>
-
+    <body>
+		
+		
+        <script src="js/mui.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            mui.init();
+            mui.plusReady(function() {
+                /**
+                 * 获取本地存储中launchFlag的值
+                 * http://www.html5plus.org/doc/zh_cn/storage.html#plus.storage.getItem
+                 * 若存在，说明不是首次启动，直接进入首页；
+                 * 若不存在，说明是首次启动，进入引导页；
+                 */
+                var launchFlag = plus.storage.getItem("launchFlag");
+                if(launchFlag) {
+                    mui.openWindow({
+                        url: "login-before.html",
+                        id: "login-before",
+                        extras: {
+                            mark: "index" //额外的参数，仅仅是个标识，实际开发中不用；
+                        }
+                    });
+                } else {
+                    mui.openWindow({
+                        url: "guildpage.html",
+                        id: "guildpage"
+                    });
+                }
+            });
+        </script>
+    </body>
 
 </html>

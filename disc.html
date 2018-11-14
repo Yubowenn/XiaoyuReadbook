@@ -3,36 +3,57 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>发现页面</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.css" rel="stylesheet" />
+
+		<style>
+			#searchengine{
+				width: 300;
+				border-radius: 10px;
+				margin:10px;
+			}
+		</style>
 	</head>
 
 	<body>
 
-		<form class="mui-input-group">
-			<div class="mui-input-row mui-search">
-				<input type="search" class="mui-input-clear" placeholder="斗破苍穹">
-			</div>
-		</form>
+		<!--顶部搜索框-->
+		<div class="mui-input-row mui-search" id="searchengine">
+			<input type="search" class="mui-input-clear" placeholder="龙族">
+		</div>
+
+
+		<!--内容部分-->
 
 
 
-
-
-		<nav class="mui-bar mui-bar-tab"><a class="mui-tab-item">
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" id="defaultTap">
 				<span class="mui-icon mui-icon-pengyouquan"></span>
-				<span class="mui-tab-label mui-active">发现</span></a>
-			<a class="mui-tab-item" her="tv.html">
+				<span class="mui-tab-label">发现</span></a>
+			<a class="mui-tab-item" her="shelf.html">
 				<span class="mui-icon mui-icon-bars"></span>
 				<span class="mui-tab-label">书架</span></a>
-			<a class="mui-tab-item" her="weibo.html">
+			<a class="mui-tab-item" her="thought.html">
 				<span class="mui-icon mui-icon-chat"></span>
 				<span class="mui-tab-label">想法</span></a>
-			<a class="mui-tab-item" her="my.html">
+			<a class="mui-tab-item" her="myself.html">
 				<span class="mui-icon mui-icon-person"></span>
 				<span class="mui-tab-label">我</span></a>
 		</nav>
+		<script>
+			mui(".mui-bar-tab").on('tap', '.mui-tab-item', function() {
+				id = this.getAttribute("her");
+				if (id != null) {
+					mui.openWindow({
+						url: id,
+						id: id
+					});
+				}
+			});
+		</script>
 
 		<script src="js/mui.js"></script>
 		<script type="text/javascript">

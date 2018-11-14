@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>书架页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+	</head>
+
+	<style>
+		.shelf{
+			text-align: center;
+			height: 100px;
+			line-height: 50px;
+		}
+		#e-c{
+			position:absolute;
+			right:20px;
+			top:15px;
+		}
+		.mui-tab-item{
+			float:left;
+			position:relative;
+			left:50%
+		}
+
+		.mui-tab-item mui-tab-label{
+			list-style:none;
+			margin:0;
+			padding:0;
+			position:relative;
+			left:-50%;
+		}
+		
+	</style>
+
+	<body>
+
+		<div class="mui-content">
+			<div class="shelf"><span>书架</span></div>
+			<div class="e-c" id="e-c" onclick="myFunction()"><span>编辑</span></div>
+			<!--<input type="button" id="e-c" value="显示/隐藏" />-->
+
+
+		</div>
+		<!--js控制编辑与取消文字的互相转化-->
+		<script type="text/javascript">
+			function myFunction() {
+				var div = document.getElementById('e-c');
+				if (div.innerHTML == "编辑") {
+					div.innerHTML = "取消";
+				} else {
+					div.innerHTML = "编辑";
+				}
+			}
+		</script>
+
+
+		<a class="mui-tab-item" id="book1">
+			<img src="images/convex.png" height="127" width="90"><br />
+			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+		</a>
+
+
+		<!-- <div class="mui-card">
+
+			<div class="mui-card-header">页眉</div>
+
+			<div class="mui-card-content">内容区</div>
+
+			<div class="mui-card-footer">页脚</div>
+		</div> -->
+
+
+
+
+		<!--底部选项卡-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item" her="defaultTap">
+				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-tab-label">发现</span></a>
+			<a class="mui-tab-item mui-active" id="shelf.html">
+				<span class="mui-icon mui-icon-bars"></span>
+				<span class="mui-tab-label">书架</span></a>
+			<a class="mui-tab-item" her="thought.html">
+				<span class="mui-icon mui-icon-chat"></span>
+				<span class="mui-tab-label">想法</span></a>
+			<a class="mui-tab-item" her="myself.html">
+				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-tab-label">我</span></a>
+		</nav>
+
+		<!-- <ul class="mui-table-view mui-grid-view mui-grid-9">
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-home"></span>
+					<div class="mui-media-body">Home</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
+					<div class="mui-media-body">Email</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-chatbubble"></span>
+					<div class="mui-media-body">Chat</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-location"></span>
+					<div class="mui-media-body">Location</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-search"></span>
+					<div class="mui-media-body">Search</div>
+				</a>
+			</li>
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+				<a href="#">
+					<span class="mui-icon mui-icon-phone"></span>
+					<div class="mui-media-body">Phone</div>
+				</a>
+			</li>
+		</ul> -->
+
+
+
+
+
+
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>
