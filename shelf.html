@@ -19,13 +19,42 @@
 			right:20px;
 			top:15px;
 		}
-		.mui-tab-item{
+		#book1{
 			float:left;
 			position:relative;
-			left:50%
+			top:-34px;
+			left:22px;
 		}
-
-		.mui-tab-item mui-tab-label{
+		#book1 mui-tab-label{
+			list-style:none;
+			margin:0;
+			padding:0;
+			position:relative;
+			left:-50%;
+		}
+		
+		#book2{
+			float:left;
+			position:relative;
+			top:-34px;
+			left:59px;
+		}
+		#book2 mui-tab-label{
+			list-style:none;
+			margin:0;
+			padding:0;
+			position:relative;
+			left:-50%;
+		}
+		
+			
+		#book3{
+			float:left;
+			position:relative;
+			top:-34px;
+			left:89px;
+		}
+		#book3 mui-tab-label{
 			list-style:none;
 			margin:0;
 			padding:0;
@@ -44,17 +73,9 @@
 
 
 		</div>
-		<!--js控制编辑与取消文字的互相转化-->
-		<script type="text/javascript">
-			function myFunction() {
-				var div = document.getElementById('e-c');
-				if (div.innerHTML == "编辑") {
-					div.innerHTML = "取消";
-				} else {
-					div.innerHTML = "编辑";
-				}
-			}
-		</script>
+
+
+
 
 
 		<a class="mui-tab-item" id="book1">
@@ -62,82 +83,58 @@
 			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
 		</a>
 
-
-		<!-- <div class="mui-card">
-
-			<div class="mui-card-header">页眉</div>
-
-			<div class="mui-card-content">内容区</div>
-
-			<div class="mui-card-footer">页脚</div>
-		</div> -->
+		<a class="mui-tab-item" id="book2">
+			<img src="images/convex.png" height="127" width="90"><br />
+			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+		</a>
+		
+		<a class="mui-tab-item" id="book3">
+			<img src="images/convex.png" height="127" width="90"><br />
+			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+		</a>
 
 
 
 
 		<!--底部选项卡-->
 		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item" her="defaultTap">
+			<a class="mui-tab-item" href="disc.html">
 				<span class="mui-icon mui-icon-pengyouquan"></span>
 				<span class="mui-tab-label">发现</span></a>
-			<a class="mui-tab-item mui-active" id="shelf.html">
+			<a class="mui-tab-item mui-active" id="defaultTap">
 				<span class="mui-icon mui-icon-bars"></span>
 				<span class="mui-tab-label">书架</span></a>
-			<a class="mui-tab-item" her="thought.html">
+			<a class="mui-tab-item" href="thought.html">
 				<span class="mui-icon mui-icon-chat"></span>
 				<span class="mui-tab-label">想法</span></a>
-			<a class="mui-tab-item" her="myself.html">
+			<a class="mui-tab-item" href="myself.html">
 				<span class="mui-icon mui-icon-person"></span>
 				<span class="mui-tab-label">我</span></a>
 		</nav>
 
-		<!-- <ul class="mui-table-view mui-grid-view mui-grid-9">
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-home"></span>
-					<div class="mui-media-body">Home</div>
-				</a>
-			</li>
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
-					<div class="mui-media-body">Email</div>
-				</a>
-			</li>
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-chatbubble"></span>
-					<div class="mui-media-body">Chat</div>
-				</a>
-			</li>
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-location"></span>
-					<div class="mui-media-body">Location</div>
-				</a>
-			</li>
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-search"></span>
-					<div class="mui-media-body">Search</div>
-				</a>
-			</li>
-			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-				<a href="#">
-					<span class="mui-icon mui-icon-phone"></span>
-					<div class="mui-media-body">Phone</div>
-				</a>
-			</li>
-		</ul> -->
-
-
-
-
-
-
 		<script src="js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			<!--js控制编辑与取消文字的互相转化-->
+			function myFunction() {
+				var div = document.getElementById('e-c');
+				if (div.innerHTML == "编辑") {
+					div.innerHTML = "取消";
+				} else {
+					div.innerHTML = "编辑";
+				}
+			};
+			<!--控制页面跳转-->
+			var id = 0;
+			mui(".mui-bar-tab").on('tap', '.mui-tab-item', function() {
+				id = this.getAttribute("href");
+				if (id != null) {
+					mui.openWindow({
+						url: id,
+						id: id
+					});
+				}
+			});
 		</script>
 	</body>
 

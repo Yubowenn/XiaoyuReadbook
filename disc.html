@@ -33,19 +33,24 @@
 			<a class="mui-tab-item mui-active" id="defaultTap">
 				<span class="mui-icon mui-icon-pengyouquan"></span>
 				<span class="mui-tab-label">发现</span></a>
-			<a class="mui-tab-item" her="shelf.html">
+			<a class="mui-tab-item" href="shelf.html">
 				<span class="mui-icon mui-icon-bars"></span>
 				<span class="mui-tab-label">书架</span></a>
-			<a class="mui-tab-item" her="thought.html">
+			<a class="mui-tab-item" href="thought.html">
 				<span class="mui-icon mui-icon-chat"></span>
 				<span class="mui-tab-label">想法</span></a>
-			<a class="mui-tab-item" her="myself.html">
+			<a class="mui-tab-item" href="myself.html">
 				<span class="mui-icon mui-icon-person"></span>
 				<span class="mui-tab-label">我</span></a>
 		</nav>
-		<script>
+
+		<script src="js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			<!--控制页面跳转-->
+			var id = 0;
 			mui(".mui-bar-tab").on('tap', '.mui-tab-item', function() {
-				id = this.getAttribute("her");
+				id = this.getAttribute("href");
 				if (id != null) {
 					mui.openWindow({
 						url: id,
@@ -53,11 +58,6 @@
 					});
 				}
 			});
-		</script>
-
-		<script src="js/mui.js"></script>
-		<script type="text/javascript">
-			mui.init()
 		</script>
 	</body>
 
