@@ -3,35 +3,106 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>想法</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
 	</head>
 	<style>
-		.mui-card>mui-card-content{
+		.mui-card-content{
 			padding-left: 20px;
-			padding-top: 20px;
-			padding-bottom: 20px;
+			padding-right: 20px;
+			padding-top: 15px;
+			padding-bottom: 15px;
 		}
+		.mui-bar{
+			-webkit-box-shadow: 0 0 2px rgba(0,0,0,.3);
+		}
+		.mui-card{
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border-radius: 7px;
+		}
+		#love_icon{
+			padding-left: 170px;
+		}
+		
+		
 	</style>
 
 	<body>
 
-
 		<!--内容区域-->
-		<div class="mui-card">
-			<!--页眉，放置标题-->
-			<div class="mui-card-header">
-				%小宇哥%
-				<p>发表于 2018-11-11 11:11</p>
-			</div>
-			<!--内容区-->
-			<div class="mui-card-content">Am I green?</div>
-			<!--页脚，放置补充信息或支持的操作-->
-			<div class="mui-card-footer mui-card-media">
-				<span class="mui-icon mui-icon-paperplane"></span>
+		<!--下拉刷新容器-->
+		<div id="refreshContainer" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<!--数据列表-->
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="images/tou1.png" />
+						<div class="mui-media-body">
+							谁说地球是圆的
+							<p style="font-size:10px">昨天 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">在前一段时间，我看到好多友邻都在探讨国内外名著的“三观”问题，当我看到这一话题时，第一个反应就是《简·爱》这部小说肯定会中枪，点开相关的帖子和话题一看，《简·爱》的“三观”讨论果然名列前茅。</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer mui-media">
+						<span class="mui-icon iconfont icon-love_icon" id="love_icon"></span>
+						<span class="mui-icon iconfont icon-pinglun" id="pinglun"></span>
+						<span class="mui-icon iconfont icon-zhuanfa" id="zhuanfa"></span>
+					</div>
+				</div>
+				
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="images/tou1.png" />
+						<div class="mui-media-body">
+							谁说地球是圆的
+							<p style="font-size:10px">昨天 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">在前一段时间，我看到好多友邻都在探讨国内外名著的“三观”问题，当我看到这一话题时，第一个反应就是《简·爱》这部小说肯定会中枪，点开相关的帖子和话题一看，《简·爱》的“三观”讨论果然名列前茅。</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer mui-media">
+						<span class="mui-icon iconfont icon-love_icon" id="love_icon"></span>
+						<span class="mui-icon iconfont icon-pinglun" id="pinglun"></span>
+						<span class="mui-icon iconfont icon-zhuanfa" id="zhuanfa"></span>
+					</div>
+				</div>
+				
+				<div class="mui-card">
+					<!--页眉，放置标题-->
+					<div class="mui-card-header mui-card-media">
+						<img src="images/tou1.png" />
+						<div class="mui-media-body">
+							谁说地球是圆的
+							<p style="font-size:10px">昨天 15:30</p>
+						</div>
+					</div>
+					<!--内容区-->
+					<div class="mui-card-content">在前一段时间，我看到好多友邻都在探讨国内外名著的“三观”问题，当我看到这一话题时，第一个反应就是《简·爱》这部小说肯定会中枪，点开相关的帖子和话题一看，《简·爱》的“三观”讨论果然名列前茅。</div>
+					<!--页脚，放置补充信息或支持的操作-->
+					<div class="mui-card-footer mui-media">
+						<span class="mui-icon iconfont icon-love_icon" id="love_icon"></span>
+						<span class="mui-icon iconfont icon-pinglun" id="pinglun"></span>
+						<span class="mui-icon iconfont icon-zhuanfa" id="zhuanfa"></span>
+					</div>
+				</div>
+				
+				
 			</div>
 		</div>
+
+
+
+
+
+
 
 
 		<!--底部选项卡-->
@@ -66,6 +137,14 @@
 					});
 				}
 			});
+			
+			<!--页面滚动-->
+			(function($) {
+				$(".mui-scroll-wrapper").scroll({});
+			})(mui);
+// 			mui('.mui-scroll-wrapper').scroll({
+// 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006 
+// 			});
 		</script>
 	</body>
 
