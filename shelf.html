@@ -6,6 +6,7 @@
 		<title>书架页面</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 	</head>
 
 	<style>
@@ -66,36 +67,59 @@
 			-webkit-box-shadow: 0 0 2px rgba(0,0,0,.3);
 		
 		}
+		.shadow{
+            border: 1px solid white;
+            background: url('img/shadow.gif') no-repeat bottom right;
+            /* margin: 5px; */
+            float: left;
+            clear: right;
+        }
+        .shadow img{
+            display: block;
+            width: 300px;
+            height: 300px;
+            /* 向左上角偏移5px */
+            /* margin: -5px 5px 5px -5px; */
+            /* 或者使用相对定位 */
+            position: relative;
+            top: -5px;
+            left: -5px;
+            /* border: 1px solid red;
+            padding: 4px; */
+        }
 	</style>
 
 	<body>
 
-		<div class="mui-content">
+		<div class="mui-media" style="height:617px;background-color:white;">
+
 			<div class="shelf"><span>书架</span></div>
 			<div class="e-c" id="e-c" onclick="myFunction()"><span>编辑</span></div>
-			<!--<input type="button" id="e-c" value="显示/隐藏" />-->
 
 
+			<a class="mui-tab-item" id="book1">
+				<div class="shadow">
+					<img src="images/convex.png" height="127" width="90"><br /></div>
+				<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+			</a>
+
+			<a class="mui-tab-item" id="book2">
+				<img src="images/convex.png" height="127" width="90"><br />
+				<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+			</a>
+
+			<a class="mui-tab-item" id="book3">
+				<img src="images/convex.png" height="127" width="90"><br />
+				<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
+			</a>
 		</div>
 
 
 
 
 
-		<a class="mui-tab-item" id="book1">
-			<img src="images/convex.png" height="127" width="90"><br />
-			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
-		</a>
 
-		<a class="mui-tab-item" id="book2">
-			<img src="images/convex.png" height="127" width="90"><br />
-			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
-		</a>
 
-		<a class="mui-tab-item" id="book3">
-			<img src="images/convex.png" height="127" width="90"><br />
-			<span class="mui-tab-label" style="width:100%;text-align:center;display:block;">凸优化</span>
-		</a>
 
 
 
@@ -103,16 +127,16 @@
 		<!--底部选项卡-->
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item" href="disc.html">
-				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-icon iconfont icon-faxian"></span>
 				<span class="mui-tab-label">发现</span></a>
 			<a class="mui-tab-item mui-active" id="defaultTap">
-				<span class="mui-icon mui-icon-bars"></span>
+				<span class="mui-icon iconfont icon-shu"></span>
 				<span class="mui-tab-label">书架</span></a>
 			<a class="mui-tab-item" href="thought.html">
-				<span class="mui-icon mui-icon-chat"></span>
+				<span class="mui-icon iconfont">&#xe600;</span>
 				<span class="mui-tab-label">想法</span></a>
 			<a class="mui-tab-item" href="myself.html">
-				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-icon iconfont">&#xe612;</span>
 				<span class="mui-tab-label">我</span></a>
 		</nav>
 

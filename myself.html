@@ -6,6 +6,7 @@
 		<title>我的</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
 
 		<style>
 			.mui-bar{
@@ -49,6 +50,16 @@
 				border:1px solid white;/*为了显示居中效果明显为 div 设置了边框*/
 				text-align: center;
 			}
+			.items{
+				padding:15px;
+			}
+			.icon{
+          width: 1em; height: 1em;
+          vertical-align: 5em;
+          fill: currentColor;
+          overflow: hidden;
+					font-size:20px;
+			}
 		</style>
 	</head>
 
@@ -57,36 +68,76 @@
 		<div class="mui-scroll-wrapper">
 			<div class="mui-scroll">
 				<!--顶部编辑资料模块-->
-				<div class="mui-media" style="height:150px;background-color:white;">
+				<div class="mui-media" style="height:160px;background-color:white;">
 					<!--头部-->
-					<div id="topbar">
+					<div id="topbar" style="padding-top: 5px;">
 						<span class="mui-icon mui-icon-email mui-media-object mui-pull-left"></span>
 						<span class="mui-icon mui-icon-settings mui-media-object mui-pull-right"></span>
-						<div id="UserName">谁说地球是圆的</div><!--用户名-->	
+						<div id="UserName">谁说地球是圆的</div>
+						<!--用户名-->
 					</div>
 
 					<br />
-					
+
 					<!--中部-->
 					<div id="contents">
 						<span class="mui-icon mui-icon-arrowright mui-media-object mui-pull-right"></span>
 						<span class="mui-icon mui-icon-arrowleft mui-media-object mui-pull-left"></span>
 						<div align="center"><img id="Usertou" src="images/Usertou.png" /></div>
 					</div>
-					
+
 					<!--底部-->
 					<div id="editprofile">
 						<p id="edit">编辑资料</p>
 					</div>
 				</div>
-				
+
 				<div class="mui-media" style="height:12px;"></div>
-				
+
 				<!--中部功能选项卡-->
-				<div class="mui-media" style="height:600px;background-color:white;">
-					
+				<div class="mui-media" style="height:103px;background-color:white;">
+					<div class="items">
+						<span class="mui-icon iconfont mui-media-object mui-pull-left" style="font-size: 20px;">&#xe606;</span>
+						<div id="bonus">&nbsp;&nbsp;&nbsp;奖品</div>
+					</div>
+					<!-- <hr style="height:1px;border:none;border-top:1px dashed #0066CC;" /> -->
+					<div class="items">
+						<span class="mui-icon iconfont mui-media-object mui-pull-left" style="font-size: 21px;">&#xe60e;</span>
+						<div id="bonus">&nbsp;&nbsp;&nbsp;已购买</div>
+					</div>
 				</div>
-				
+
+				<div class="mui-media" style="height:12px;"></div>
+
+				<div class="mui-media" style="height:400px;background-color:white;">
+					<div class="items">
+						<span class="mui-icon iconfont mui-media-object mui-pull-left" style="font-size: 20px;">&#xe627;</span>
+						<div id="cards">&nbsp;&nbsp;&nbsp;卡券</div>
+					</div>
+
+					<div class="items">
+						<span class="mui-icon iconfont mui-media-object mui-pull-left" style="font-size: 20px;">&#xe625;</span>
+						<div id="books">&nbsp;&nbsp;&nbsp;书单</div>
+					</div>
+
+					<div class="items">
+						<span class="mui-icon iconfont mui-media-object mui-pull-left" style="font-size: 20px;">&#xe65b;</span>
+						<div id="likes">&nbsp;&nbsp;&nbsp;喜欢</div>
+					</div>
+
+					<div class="items ">
+						<!-- <span class="mui-icon iconfont mui-media-object mui-pull-left" id="icon-vip" style="font-size: 20px;">&#xe6c5;</span> -->
+						<span class="mui-icon mui-media-object mui-pull-left" style="font-size: 20px;">
+							<svg class="icon" aria-hidden="true">
+								<use xlink:href="#icon-shu1"></use>
+							</svg>
+						</span>
+						<div id="vip">&nbsp;&nbsp;&nbsp;我的会员</div>
+					</div>
+					
+
+				</div>
+
 			</div>
 		</div>
 
@@ -94,21 +145,22 @@
 		<!--底部tab选项卡-->
 		<nav class="mui-bar mui-bar-tab">
 			<a class="mui-tab-item" href="disc.html">
-				<span class="mui-icon mui-icon-pengyouquan"></span>
+				<span class="mui-icon iconfont icon-faxian"></span>
 				<span class="mui-tab-label">发现</span></a>
 			<a class="mui-tab-item" href="shelf.html">
-				<span class="mui-icon mui-icon-bars"></span>
+				<span class="mui-icon iconfont icon-shu"></span>
 				<span class="mui-tab-label">书架</span></a>
 			<a class="mui-tab-item" href="thought.html">
-				<span class="mui-icon mui-icon-chat"></span>
+				<span class="mui-icon iconfont">&#xe600;</span>
 				<span class="mui-tab-label">想法</span></a>
 			<a class="mui-tab-item mui-active" id="defaultTap">
-				<span class="mui-icon mui-icon-person"></span>
+				<span class="mui-icon iconfont">&#xe612;</span>
 				<span class="mui-tab-label">我</span></a>
 		</nav>
 
 
 		<script src="js/mui.js"></script>
+		<script src="js/iconfont.js"></script>
 		<script type="text/javascript">
 			mui.init();
 			<!--控制页面跳转-->
