@@ -19,15 +19,10 @@
 			}
 			
 			#signin{
-				    position: fixed;
-					top: 500px;
-					right: 135px;
-					width: 100;
-					border: none;
-					border-radius: 10px;
-					padding: 7px 13px;
-					color: #ffffff
-					background: #007aff;
+				    position: absolute;
+				    bottom: 40px;
+				    width: 60%;
+				    left: 20%;
 			}
 		</style>
 	</head>
@@ -40,19 +35,8 @@
 			<div class="product-icon"><span>小宇读书</span></div>
 		</div>
 
-		<button type="button" class="mui-btn mui-btn-primary" id="signin">快速登入</button>
-
-
-
-
-
-
-
-
-
-
-
-
+		<button data-loading-icon-position="right" type="button" class="mui-btn mui-btn-blue mui-btn-outlined"
+		 id="signin">快速登入</button>
 
 
 
@@ -61,41 +45,19 @@
 	</body>
 
 	<script>
-		mui.init({
-					gestureConfig: {
-						tap: true, //默认为true
-						doubletap: true, //默认为false
-						longtap: true, //默认为false
-						swipe: true, //默认为true
-						drag: true, //默认为true
-						hold: false, //默认为false，不监听
-						release: false //默认为false，不监听
-					});
+		mui.init()
 
+		mui(document.body).on('tap', '.mui-btn', function(e) {
+			mui(this).button('loading');
+			setTimeout(function() {
+				mui(this).button('reset');
+			}.bind(this), 2000);
+			mui.openWindow({
+				url: 'disc.html',
+				id: 'disc'
+			});
+		});
 
-				mui.ready((function) {
-
-				})
-
-
-				mui.plusReady(function() {
-					var page = ["01-jiazaiziyemian.html", "02-tabbarDiv.html", "03-tabbarWebView.html", "04-tabbarMy.html",
-						"05-imglunbo.html", "06-Camera.html", "07-fullPush.html"
-					];
-
-					var arr = document.getElementsByTagName("a");
-					for (var i = 0; i < arr.length; i++) {
-						! function(i) {
-							// 在手机APP中，事件绑定推荐使用DOM2模型。 用tap事件取代click事件。
-							arr[i].addEventListener("tap", function() {
-								mui.openWindow({
-									url: page[i],
-									id: page[i],
-								})
-							})
-						}(i);
-					}
-				})
 	</script>
 
 

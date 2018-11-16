@@ -46,7 +46,7 @@
 					<div class="mui-slider-item">
 						<a href="javascript:;">
 							<img class="guide-img" src="images/4.jpg">
-							<button class="mui-btn mui-btn-blue mui-btn-outlined" type="button" id="start">开始体验</button>
+							<button onclick="addEvent()"class="mui-btn mui-btn-blue mui-btn-outlined" type="button" id="start">开始体验</button>
 						</a>
 					</div>
 				</div>
@@ -55,17 +55,24 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init();
-			var id = 0;	
-			mui(".mui-content").on('tap', '.mui-btn', function() {
-				//获取id
-				id = this.getAttribute("id");
-				if (id != null) {
-					mui.openWindow({
-						url: login-before.html,
-						id: login-before
-					});
-				}
-			})
+			// var id = 0;	
+// 			mui(".mui-content").on('tap', '.mui-slider-item', function() {
+// 				//获取id
+// 				id = this.getAttribute("id");
+// 				if (id != null) {
+// 					mui.openWindow({
+// 						url: 'login-before.html',
+// 						id: 'login-before'
+// 					});
+// 				}
+// 			})
+			
+			function addEvent(){
+				mui.openWindow({
+					url: 'login-before.html',
+					id: 'login-before'
+				});
+			}
 			
 		</script>
 	</body>
