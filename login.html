@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html class="ui-page-login bg-fff">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<title>登陆界面</title>
+		<style>
+			#tubiao{
+				border-radius: 40px;
+				padding:20px;
+			}
+			.mui-input-clear{
+				
+			}
+			#icon-user{
+				padding-top:8px;
+				padding-left:8px;
+				padding-bottom:8px;
+				font-size:20px;
+			}
+			#icon-password{
+				padding-top:8px;
+				padding-left:8px;
+				padding-bottom:8px;
+				font-size:20px;
+			}
+			#signin{
+					position: absolute;
+					top: 320px;
+					width: 60%;
+					left: 20%;
+					border-radius: 40px;
+			}
+			#wechat{
+					position: absolute;
+					bottom: 40px;
+					width: 60%;
+					left: 20%;
+					border-radius: 40px;
+			}
+			#qq{
+					position: absolute;
+					bottom: 90px;
+					width: 60%;
+					left: 20%;
+					border-radius: 40px;
+			}
+			.icon{
+					width: 1em; height: 1em;
+					fill: currentColor;
+					overflow: hidden;
+					font-size:23px;
+			}
+		</style>
+	</head>
+
+	<body style="background-color: white;">
+		<div align="center"><img src="images/Tubiao.png" id="tubiao" /></div>
+
+
+
+
+		<br />
+		<div class="mui-input-row mui-media">
+			<span class="mui-icon iconfont mui-media-object mui-pull-left" id="icon-user">&#xe601;</span>
+			<input type="text" class="mui-input-clear" placeholder="请输入用户名" style="margin-left:10px; width:50%; border:1px">
+		</div>
+		<br />
+		<div class="mui-input-row">
+			<span class="mui-icon iconfont mui-media-object mui-pull-left" id="icon-password">&#xe696;</span>
+			<input type="password" class="mui-input-password" placeholder="请输入密码" style="margin-left:10px; width:50%; border:1px">
+		</div>
+
+		<button data-loading-icon-position="right" type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="signin">登陆</button>
+
+
+
+		<button data-loading-icon-position="right" type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="qq">
+			<span class="mui-icon mui-media-object mui-pull-left" style="padding-top:3px;border:1px solid white; font-size: 25px;">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-QQ1"></use>
+				</svg>
+			</span>
+			<div style="font-size:16px; margin-right:15px; margin-top:6px;">QQ登陆</div>
+		</button>
+		<button data-loading-icon-position="right" type="button" class="mui-btn mui-btn-blue mui-btn-outlined" id="wechat">
+			<span class="mui-icon mui-media-object mui-pull-left" style="padding-top:3px; border:1px solid white; font-size: 20px;">
+				<svg class="icon" aria-hidden="true">
+					<use xlink:href="#icon-weixin"></use>
+				</svg>
+			</span>
+			<div style="font-size:16px; margin-right:15px; margin-top:6px;">微信登陆</div>
+		</button>
+		
+
+
+
+
+
+		<script src="js/mui.js"></script>
+		<script src="js/iconfont.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui(document.body).on('tap', '.mui-btn', function(e) {
+				mui(this).button('loading');
+				setTimeout(function() {
+					mui(this).button('reset');
+				}.bind(this), 2000);
+				mui.openWindow({
+					url: 'disc.html',
+					id: 'disc'
+				});
+			});
+		</script>
+	</body>
+
+</html>
